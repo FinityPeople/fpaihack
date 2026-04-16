@@ -134,7 +134,40 @@ If it works, the SDK picked up your OAuth credentials from the CLI config automa
 
 ---
 
-## 4. What you can do in the workspace
+## 4. Get free data from the Databricks Marketplace
+
+The Databricks Marketplace has free datasets you can use for the hackathon — weather, finance, demographics, geospatial, and more. No downloads or imports needed; the data lands directly in your workspace as a catalog.
+
+### How to add a free dataset
+
+1. Go to the **[Databricks Marketplace — free listings](https://adb-7405616827368959.19.azuredatabricks.net/marketplace?isFree=true&o=7405616827368959&sortBy=popularity)**.
+2. Browse or search for a dataset you want to use.
+3. Click on the dataset to open its detail page.
+4. Click **Get Instant Access** (top-right corner of the page).
+5. **Important:** Expand **More options** in the dialog that appears.
+6. Change the **Catalog name** to something unique with your team prefix, e.g. `teamalpha_weather_data` or `mike_nyc_taxi`.
+   - If you don't rename it, it may conflict with someone else who added the same dataset.
+   - Use a prefix that identifies your team so everyone knows whose it is.
+7. Click confirm. The dataset is now available as a catalog in your workspace.
+
+You can now query it in notebooks, SQL editor, or from your local tools (CLI, SDK, AI coding agents).
+
+### What you can do with the data
+
+Once you have data in your workspace, the sky's the limit:
+
+- **Use AI coding tools** (Claude Code, Codex CLI) from your terminal to explore, query, and build on the data
+- **Use Genie** inside Databricks to ask questions about your data in natural language
+- **Build ML models** using notebooks, MLflow, or your local Python environment
+- **Create dashboards** and visualizations in Databricks SQL
+- **Combine datasets** — join marketplace data with your own data or other marketplace datasets
+- **Build AI/LLM applications** that use the data as context
+
+You're free to build whatever you want — ML models, data pipelines, dashboards, AI apps, analysis notebooks, or anything else you can think of.
+
+---
+
+## 5. What you can do in the workspace
 
 Once you're in, you have access to the `fp_hack` catalog where:
 
