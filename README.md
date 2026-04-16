@@ -8,46 +8,70 @@ Welcome to the AI Development Hackathon! This repo contains everything you need 
 
 There are two ways to get set up — pick whichever feels more comfortable:
 
-### Option A: Let the AI do the setup for you
+### Option A: One-liner — let the AI set up everything for you
 
-This is the fastest path. Just install **one** AI coding tool first, then let it handle the rest:
+The fastest path. Copy-paste **one command** into your terminal. It installs the AI tool, clones this repo, and hands off to the AI to read the setup guides and do the rest.
 
-1. Install **Claude Code** or **Codex CLI** (pick one — see the quick install below).
-2. Open a terminal in this repo folder.
-3. Give it this prompt:
+#### Mac / Linux
 
-**Claude Code:**
-```
-claude
-```
-Then type:
-```
-Read the setup guides in this repo (setup-python.md, setup-codex.md,
-databricks-access-instructions.md) and help me install and configure
-everything step by step. Check what I already have installed and skip
-what's not needed.
+**Using Claude Code:**
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash && git clone https://github.com/FinityPeople/fpaihack.git && cd fpaihack && claude -p "Read all the setup guides in this repo (setup-python.md, setup-codex.md, databricks-access-instructions.md). Check what is already installed on this machine and help me install and configure everything that is missing. Walk me through anything that needs my input (like signing in). Skip what is already done."
 ```
 
-**Codex CLI:**
-```
-codex
-```
-Then type:
-```
-Read the setup guides in this repo (setup-python.md, setup-claude.md,
-databricks-access-instructions.md) and help me install and configure
-everything step by step. Check what I already have installed and skip
-what's not needed.
+**Using Codex CLI** (requires Node.js 18+ — install from [nodejs.org](https://nodejs.org/) first if needed):
+
+```bash
+npm install -g @openai/codex && git clone https://github.com/FinityPeople/fpaihack.git && cd fpaihack && codex "Read all the setup guides in this repo (setup-python.md, setup-claude.md, databricks-access-instructions.md). Check what is already installed on this machine and help me install and configure everything that is missing. Walk me through anything that needs my input (like signing in). Skip what is already done."
 ```
 
-The AI will read the guides, check what's already on your machine, and walk you through the rest interactively.
+#### Windows
 
-**Quick install — Claude Code:**
-- Mac / Linux: `curl -fsSL https://claude.ai/install.sh | bash`
-- Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`
+**Using Claude Code — PowerShell:**
 
-**Quick install — Codex CLI:**
-- `npm install -g @openai/codex` (requires Node.js 18+)
+```powershell
+irm https://claude.ai/install.ps1 | iex; git clone https://github.com/FinityPeople/fpaihack.git; cd fpaihack; claude -p "Read all the setup guides in this repo (setup-python.md, setup-codex.md, databricks-access-instructions.md). Check what is already installed on this machine and help me install and configure everything that is missing. Walk me through anything that needs my input (like signing in). Skip what is already done."
+```
+
+**Using Codex CLI — PowerShell** (requires Node.js 18+ — run `winget install OpenJS.NodeJS.LTS` first if needed):
+
+```powershell
+npm install -g @openai/codex; git clone https://github.com/FinityPeople/fpaihack.git; cd fpaihack; codex "Read all the setup guides in this repo (setup-python.md, setup-claude.md, databricks-access-instructions.md). Check what is already installed on this machine and help me install and configure everything that is missing. Walk me through anything that needs my input (like signing in). Skip what is already done."
+```
+
+> **Don't have git?** The AI will notice and help you install it. On Windows, download [Git for Windows](https://git-scm.com/downloads/win) first. On Mac, running `git` in the terminal will prompt you to install the Xcode Command Line Tools automatically.
+
+#### What happens when you run this
+
+1. Installs the AI coding tool (Claude Code or Codex CLI)
+2. Clones this hackathon repo to your machine
+3. The AI reads the setup guides in the repo
+4. It checks what's already installed on your machine
+5. It installs and configures everything that's missing
+6. It asks you for input when needed (e.g. signing in to services)
+
+---
+
+### Option A2: Already have the AI installed? Just run the prompt
+
+If you already have Claude Code or Codex CLI installed, clone the repo and start the AI:
+
+```bash
+git clone https://github.com/FinityPeople/fpaihack.git
+cd fpaihack
+claude   # or: codex
+```
+
+Then paste this prompt:
+
+```
+Read all the setup guides in this repo (setup-python.md, setup-codex.md,
+setup-claude.md, databricks-access-instructions.md). Check what is already
+installed on this machine and help me install and configure everything
+that is missing. Walk me through anything that needs my input (like signing
+in). Skip what is already done.
+```
 
 ---
 
