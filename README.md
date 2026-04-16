@@ -92,6 +92,15 @@ in). Skip what is already done.
 
 Follow the setup guides below in order. Each guide is written step-by-step for all experience levels.
 
+#### 0. Install VS Code (recommended editor)
+
+[Visual Studio Code](https://code.visualstudio.com/) is a free code editor that works great with all the tools in this hackathon.
+
+- **Mac:** Download from [code.visualstudio.com](https://code.visualstudio.com/) or run `brew install --cask visual-studio-code`
+- **Windows:** Download from [code.visualstudio.com](https://code.visualstudio.com/) or run `winget install Microsoft.VisualStudioCode`
+
+VS Code has extensions for Databricks, Python, and more — the setup guides will point you to the right ones.
+
 #### 1. Set up your AI coding tools
 
 Pick one or both — these are the AI assistants you'll use to write code during the hackathon:
@@ -136,6 +145,7 @@ At minimum:
 
 | Resource | Link |
 |---|---|
+| VS Code download | https://code.visualstudio.com/ |
 | Databricks workspace | https://adb-7405616827368959.19.azuredatabricks.net/ |
 | Claude Desktop download | https://claude.com/download |
 | Claude Code docs | https://code.claude.com/docs/en/setup |
