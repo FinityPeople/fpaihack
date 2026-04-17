@@ -2,7 +2,7 @@
 
 Welcome to the AI Development Hackathon!
 
-This hackathon is **free and open** — you can build whatever you want, with whatever tools and data you choose. We've organized groups around shared interests, but you're not locked in — collaborate across groups, switch topics, or go solo. The goal is to explore, learn, and build something with AI.
+This hackathon is **free and open** — you can build whatever you want, with whatever tools and data you choose. This repo is here to support you with setup and getting started, but you're not limited to anything listed here. The goal is to explore, learn, and build something with AI.
 
 ## What this repo is for
 
