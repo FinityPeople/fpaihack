@@ -36,15 +36,16 @@ Cursor ships as a GUI installer for Mac and Windows. **No terminal restart or PA
 
 ## Part 2 — First run and sign-in
 
-1. Launch Cursor.
-2. Click the account icon (bottom-left corner) and choose one of:
+1. Launch Cursor. A welcome screen appears on first launch.
+2. Look at the **top-right corner** — you'll see either an **"Upgrade to Pro"** button (if you're signed out or on the free tier) or your account avatar. Click it.
+3. Choose one of:
    - **Email**
    - **Google**
    - **GitHub**
-3. Your browser will open for OAuth. Complete the sign-in and you'll be redirected back to Cursor automatically.
-4. Your plan tier shows next to the account icon once signed in.
+4. Your browser will open for OAuth. Complete the sign-in and you'll be redirected back to Cursor automatically.
+5. Once signed in, the top-right area shows your account avatar and plan tier.
 
-> If sign-in fails, double-check your account has an active Pro (or higher) subscription at [cursor.com/pricing](https://cursor.com/pricing).
+> If sign-in fails or you still see "Upgrade to Pro" after signing in, double-check your account has an active Pro (or higher) subscription at [cursor.com/pricing](https://cursor.com/pricing).
 
 ---
 
@@ -116,6 +117,7 @@ Notably for this hackathon: the **Databricks** extension installs and runs in Cu
 
 | Problem | Solution |
 |---|---|
+| Can't find the sign-in button | Look for "Upgrade to Pro" or an account avatar in the **top-right corner** of the Cursor window. |
 | Sign-in fails or "no plan" error | Confirm your Cursor account has an active Pro subscription at [cursor.com/pricing](https://cursor.com/pricing). |
 | `cursor: command not found` in terminal | In Cursor, run Command Palette → "Install 'cursor' command". |
 | `cursor-agent: command not found` | Close and reopen your terminal after running the install script. |
