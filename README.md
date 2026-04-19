@@ -8,7 +8,7 @@ This hackathon is **free and open** — you can build whatever you want, with wh
 
 This repo helps you get set up with **tools and data** so you can focus on building. It covers:
 
-- **AI coding assistants** (Claude Code, OpenAI Codex) to help you write code faster
+- **AI coding assistants** (Claude Code, OpenAI Codex, Cursor) to help you write code faster
 - **Databricks workspace** with shared catalogs and free Marketplace datasets
 - **Python environment** setup
 
@@ -37,6 +37,7 @@ The AI coding tools require a paid plan. **Sign up and log in first**, then come
 |---|---|---|
 | **Claude Code** | [claude.ai](https://claude.ai) | Pro ($20/mo), Max ($100–200/mo), Teams, or Enterprise. The free plan does **not** include Claude Code. |
 | **Codex CLI** | [chatgpt.com](https://chatgpt.com) | Plus, Pro, Business, Edu, or Enterprise. |
+| **Cursor** | [cursor.com](https://cursor.com) | Pro ($20/mo) or higher. Cursor is **editor + AI in one** — no separate Claude or ChatGPT plan needed. |
 
 You only need one — pick whichever you prefer. The first time you run the tool, it will open a browser window for you to sign in. No API keys or tokens to copy around.
 
@@ -68,7 +69,11 @@ irm https://claude.ai/install.ps1 | iex
 npm install -g @openai/codex
 ```
 
-> **Important:** After installing, **close and reopen your terminal** so the command is available on your PATH. This is especially common on Windows. If you skip this, the next step will fail with "command not found".
+**Cursor — Mac / Windows:**
+
+Download and install the app from [cursor.com/download](https://cursor.com/download). No terminal commands and no PATH setup — Cursor is a GUI app.
+
+> **Important (Claude Code and Codex only):** After installing, **close and reopen your terminal** so the command is available on your PATH. This is especially common on Windows. If you skip this, the next step will fail with "command not found". Cursor users can skip this — the app doesn't rely on a shell command.
 
 #### Step 2 — Clone this repo
 
@@ -81,7 +86,7 @@ cd fpaihack
 
 #### Step 3 — Start the AI and paste the setup prompt
 
-Start the AI tool:
+**Claude Code or Codex:** In your terminal, start the AI:
 
 ```bash
 claude
@@ -93,26 +98,40 @@ or:
 codex
 ```
 
-The first time you run it, a browser window will open for you to sign in. Complete the sign-in, then paste this prompt:
+The first time you run it, a browser window will open for you to sign in. Complete the sign-in.
+
+**Cursor:** Launch the Cursor app, open the cloned repo folder (`File → Open Folder…`), sign in when prompted, then open Chat (`Cmd+L` / `Ctrl+L`) or Agent mode (`Cmd+I` / `Ctrl+I`).
+
+Then paste the prompt for your chosen tool:
 
 **If you're using Claude Code:**
 
 ```
 Read all the setup guides in this repo (setup-python.md, setup-codex.md,
-databricks-access-instructions.md, mcp-databricks-claude.md). Check what is
-already installed on this machine and help me install and configure everything
-that is missing. Walk me through anything that needs my input (like signing
-in). Skip what is already done.
+setup-cursor.md, databricks-access-instructions.md, mcp-databricks-claude.md).
+Check what is already installed on this machine and help me install and
+configure everything that is missing. Walk me through anything that needs
+my input (like signing in). Skip what is already done.
 ```
 
 **If you're using Codex CLI:**
 
 ```
 Read all the setup guides in this repo (setup-python.md, setup-claude.md,
-databricks-access-instructions.md, mcp-databricks-codex.md). Check what is
-already installed on this machine and help me install and configure everything
-that is missing. Walk me through anything that needs my input (like signing
-in). Skip what is already done.
+setup-cursor.md, databricks-access-instructions.md, mcp-databricks-codex.md).
+Check what is already installed on this machine and help me install and
+configure everything that is missing. Walk me through anything that needs
+my input (like signing in). Skip what is already done.
+```
+
+**If you're using Cursor:**
+
+```
+Read all the setup guides in this repo (setup-python.md, setup-claude.md,
+setup-codex.md, databricks-access-instructions.md, mcp-databricks-cursor.md).
+Check what is already installed on this machine and help me install and
+configure everything that is missing. Walk me through anything that needs
+my input (like signing in). Skip what is already done.
 ```
 
 #### What happens next
@@ -139,12 +158,13 @@ VS Code has extensions for Databricks, Python, and more — the setup guides wil
 
 #### 1. Set up your AI coding tools
 
-Pick one or both — these are the AI assistants you'll use to write code during the hackathon:
+Pick one — these are the AI assistants you'll use to write code during the hackathon:
 
 | Guide | What it covers |
 |---|---|
 | [Setting up Claude](setup-claude.md) | Claude Desktop app + Claude Code VS Code extension + CLI (Anthropic) |
 | [Setting up Codex](setup-codex.md) | Codex web app + VS Code extension + CLI (OpenAI) |
+| [Setting up Cursor](setup-cursor.md) | Cursor editor — VS Code fork with AI built in (editor + AI subscription bundled) |
 
 #### 2. Set up Python
 
@@ -172,6 +192,7 @@ Want your AI coding tool to query Databricks data directly from the terminal? Th
 |---|---|
 | [Databricks MCP + Claude Code setup](mcp-databricks-claude.md) | MCP config for Claude Code — `.mcp.json`, endpoint selection, verification |
 | [Databricks MCP + Codex setup](mcp-databricks-codex.md) | MCP config for Codex CLI — `codex mcp add`, config.toml, verification |
+| [Databricks MCP + Cursor setup](mcp-databricks-cursor.md) | MCP config for Cursor — `.cursor/mcp.json`, Settings → MCP panel, verification |
 
 ---
 
@@ -182,7 +203,10 @@ At minimum:
 - A laptop (Mac or Windows)
 - A browser (Chrome, Edge, Safari, or Firefox)
 - Your corporate credentials (for Databricks access)
-- A **paid** Anthropic account ([claude.ai](https://claude.ai) — Pro, Max, Teams, or Enterprise) and/or a **paid** OpenAI account ([chatgpt.com](https://chatgpt.com) — Plus, Pro, Business, Edu, or Enterprise)
+- A **paid** subscription for **one** of these AI tools:
+  - **Anthropic** — [claude.ai](https://claude.ai) — Pro, Max, Teams, or Enterprise
+  - **OpenAI** — [chatgpt.com](https://chatgpt.com) — Plus, Pro, Business, Edu, or Enterprise
+  - **Cursor** — [cursor.com](https://cursor.com) — Pro ($20/mo) or higher (editor + AI bundled)
 
 ---
 
@@ -196,6 +220,8 @@ At minimum:
 | Claude Code docs | https://code.claude.com/docs/en/setup |
 | Codex web app | https://chatgpt.com/codex |
 | Codex CLI on GitHub | https://github.com/openai/codex |
+| Cursor download | https://cursor.com/download |
+| Cursor docs | https://cursor.com/docs |
 | uv (Python toolchain) | https://docs.astral.sh/uv/ |
 
 ---
@@ -206,10 +232,12 @@ At minimum:
 ├── README.md                          ← You are here
 ├── setup-claude.md                    ← Claude Desktop + Claude Code setup
 ├── setup-codex.md                     ← OpenAI Codex web app + CLI setup
+├── setup-cursor.md                    ← Cursor editor setup
 ├── setup-python.md                    ← Python installation with uv
 ├── databricks-access-instructions.md  ← Databricks workspace access
 ├── mcp-databricks-claude.md           ← Connect Claude Code to Databricks via MCP
-└── mcp-databricks-codex.md            ← Connect Codex CLI to Databricks via MCP
+├── mcp-databricks-codex.md            ← Connect Codex CLI to Databricks via MCP
+└── mcp-databricks-cursor.md           ← Connect Cursor to Databricks via MCP
 ```
 
 ---

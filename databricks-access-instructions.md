@@ -149,7 +149,7 @@ You can now query it in notebooks, SQL editor, or from your local tools (CLI, SD
 
 Once you have data in your workspace, the sky's the limit:
 
-- **Use AI coding tools** (Claude Code, Codex CLI) from your terminal to explore, query, and build on the data
+- **Use AI coding tools** (Claude Code, Codex CLI, Cursor) to explore, query, and build on the data
 - **Use Genie** inside Databricks to ask questions about your data in natural language
 - **Build ML models** using notebooks, MLflow, or your local Python environment
 - **Create dashboards** and visualizations in Databricks SQL
